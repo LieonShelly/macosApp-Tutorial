@@ -181,3 +181,50 @@ ImageSipper 采用 SwiftUI + macOS 原生命令行工具（sips）实现，界�
 
 ---
 
+
+---
+
+## ImageSipper 架构图
+
+```mermaid
+flowchart TD
+    %% View 层级结构
+    A["ImageSipperApp (App)"]
+    B["ContentView (HSplitView)"]
+    C["TabView (Edit Image / Make Thumbnails)"]
+    D["ImageEditView"]
+    E["ThumbsView"]
+    F["ImageEditControls"]
+    G["ThumbControls"]
+    H["TerminalView"]
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    D --> F
+    E --> G
+    B --> H
+
+    %% 指令调用流程
+    F --调用--> I[SipsRunner]
+    G --调用--> I
+    I --调用--> J[CommandRunner]
+    J --执行--> K[sips]
+    K --结果--> J
+    J --结果--> I
+    I --结果--> F
+    I --结果--> G
+
+    %% 数据通信流程
+    A -.注入.-> I
+    D -.@Binding.-> F
+    E -.@Binding.-> G
+    I -.ObservableObject.-> D
+    I -.ObservableObject.-> E
+    I -.ObservableObject.-> F
+    I -.ObservableObject.-> G
+    L[NotificationCenter] -.通知.-> D
+    L -.通知.-> E
+```
+
