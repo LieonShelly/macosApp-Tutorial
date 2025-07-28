@@ -16,6 +16,7 @@ class SipsRunner: ObservableObject {
         if sipsComandPath == nil {
             sipsComandPath = await commandRunner.pathTo(command: "sips")
         }
+        print("checkSipsCommandPath")
         return sipsComandPath
     }
     
@@ -45,8 +46,8 @@ class SipsRunner: ObservableObject {
         let args = [
             "--resampleHeightWidth", newHeight, newWidth,
             "--setProperty", "format", newFormat.rawValue,
-            picture.url.path(),
-            "--out", newURL.path()
+            picture.url.path(percentEncoded: false),
+            "--out", newURL.path(percentEncoded: false)
         ]
         
         _ = await commandRunner.runCommand(sipsComandPath, with: args)
@@ -64,8 +65,8 @@ class SipsRunner: ObservableObject {
         for imageURL in imageURLs {
             let args = [
                 "--resampleHeightWidthMax", maxDimension,
-                imageURL.path(),
-                "--out", folder.path()
+                imageURL.path(percentEncoded: false),
+                "--out", folder.path(percentEncoded: false)
             ]
             _ = await commandRunner.runCommand(sipsComandPath, with: args)
         }

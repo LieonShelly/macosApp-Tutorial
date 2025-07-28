@@ -9,10 +9,18 @@ import SwiftUI
 
 @main
 struct ImageSipperApp: App {
+    @StateObject var sipsRunner = SipsRunner()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(sipsRunner)
         }
     }
 }
 
+
+enum TabSelection {
+    case editImage
+    case makeThumbs
+}

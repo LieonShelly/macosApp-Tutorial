@@ -11,7 +11,7 @@ extension FileManager {
     
     func isFolder(url: URL) -> Bool {
         var isDir: ObjCBool = false
-        if fileExists(atPath: url.path(), isDirectory: &isDir) {
+        if fileExists(atPath: url.path(percentEncoded: false), isDirectory: &isDir) {
             return isDir.boolValue
         }
         return false
@@ -30,7 +30,7 @@ extension FileManager {
     
     func imageFiles(in url: URL) -> [URL] {
         do {
-            let files = try self.contentsOfDirectory(atPath: url.path())
+            let files = try self.contentsOfDirectory(atPath: url.path(percentEncoded: false))
             let imageFils = files.map {
                 url.appending(path: $0)
             }

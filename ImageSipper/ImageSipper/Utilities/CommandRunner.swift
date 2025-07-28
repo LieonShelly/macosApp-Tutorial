@@ -26,8 +26,8 @@ class CommandRunner: ObservableObject {
         
         let errPipe = Pipe()
         let errFile = errPipe.fileHandleForReading
-        process.standardError = errFile
-        
+        process.standardError = errPipe
+
         do {
             try process.run()
             
@@ -41,13 +41,14 @@ class CommandRunner: ObservableObject {
             let newString = getAvaiableData(from: outFile)
             publishOutput(newString + "\n")
             returnValue += newString
-            
-            if let errorData = try? errFile.readToEnd() {
-                if let error = String(data: errorData, encoding: .utf8) {
+            do {
+                if let errorData = try errFile.readToEnd(),
+                   let error = String(data: errorData, encoding: .utf8) {
                     print("ERROR:\(error)")
                 }
+            } catch {
+                print("ERROR:\(error)")
             }
-            
             return returnValue.trimmingCharacters(in: .whitespacesAndNewlines)
             
         } catch {
