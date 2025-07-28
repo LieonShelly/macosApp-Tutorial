@@ -98,6 +98,12 @@ graph TD
 
 # ImageSipper 功能与架构说明
 
+## DEMO截图
+![imageSipsEditImage](Resource/imageSipsEditImage.png)
+![imageSipsThumb](Resource/imageSipsThumb.png)
+
+---
+
 ## 一、主要功能
 
 1. **图像裁剪与尺寸调整**
