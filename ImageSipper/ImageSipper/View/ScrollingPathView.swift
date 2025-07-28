@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScollingPahtView: View {
+struct ScrollingPathView: View {
     @Binding var url: URL?
 
     var body: some View {

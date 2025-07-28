@@ -24,7 +24,7 @@ struct ImageEditView: View {
                     Text("Select Image File")
                 }
                 
-                ScollingPahtView(url: $imageURL)
+                ScrollingPathView(url: $imageURL)
             }
                 .padding()
             
@@ -74,7 +74,6 @@ struct ImageEditView: View {
     }
     
 }
-
 
 extension Notification.Name {
     static let serviceReceivedImage =

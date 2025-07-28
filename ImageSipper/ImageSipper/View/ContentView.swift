@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var showTerminalOutput = true
     @State private var selectedTab = TabSelection.editImage
     
-    
     var body: some View {
         HSplitView {
             VStack {
@@ -22,6 +21,12 @@ struct ContentView: View {
                             Text("Edit Image")
                         }
                         .tag(TabSelection.editImage)
+                    
+                    ThumbsView(selectedTab: $selectedTab)
+                        .tabItem {
+                            Text("Make Thumbnails")
+                        }
+                        .tag(TabSelection.makeThumbs)
                 }
                 .padding(.horizontal)
                 .padding(.top)
@@ -48,35 +53,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-}
-
-
-import SwiftUI
-
-struct TerminalView: View {
-    @ObservedObject var commandRunner: CommandRunner
-    
-    var body: some View {
-        VStack {
-            Text("Terminal")
-                .font(.headline)
-            
-            ScrollView {
-                Text(commandRunner.output)
-                    .textSelection(.enabled)
-                    .font(.system(size: 12, weight: .regular, design: .monospaced))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    .padding()
-            }
-            .foregroundColor(Color("TerminalText"))
-            .background(Color("TerminalBg"))
-            .border(Color.gray.opacity(0.3))
-            
-            Button("Clear") {
-                commandRunner.clearOutput()
-            }
-        }
-        .frame(minWidth: 300)
-        .padding()
-    }
 }

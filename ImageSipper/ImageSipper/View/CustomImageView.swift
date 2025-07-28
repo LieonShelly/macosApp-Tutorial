@@ -46,7 +46,6 @@ struct CustomImageView: View {
         }
     }
     
-    
     func loadURL(from data: Data?) {
         guard
             let data = data,
