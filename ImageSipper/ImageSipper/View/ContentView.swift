@@ -54,3 +54,33 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
+class ServiceProvider {
+    
+    @objc func openFromService(
+        _ pboard: NSPasteboard,
+        userData: String,
+        error: NSErrorPointer
+    ) {
+        let fileType = NSPasteboard.PasteboardType.fileURL
+        guard let filePath = pboard.pasteboardItems?.first?.string(forType: fileType),
+        let url = URL(string: filePath) else {
+            return
+        }
+        NSApp.activate()
+        
+        let fileManager = FileManager.default
+        if fileManager.isFolder(url: url) {
+            NotificationCenter.default.post(
+                name: .serviceReceivedFolder,
+                object: url
+            )
+        } else {
+            NotificationCenter.default.post(
+                name: .serviceReceivedImage,
+                object: url
+            )
+        }
+    }
+}
