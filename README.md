@@ -93,3 +93,92 @@ graph TD
 #### 3.3 用户偏好与本地存储
 
 - 使用 `@AppStorage` 和 `@SceneStorage`
+
+---
+
+# ImageSipper 功能与架构说明
+
+## 一、主要功能
+
+1. **图像裁剪与尺寸调整**
+   - 支持用户选择本地图片文件，查看图片信息（如尺寸、格式等）。
+   - 用户可自定义输入目标宽度、高度、格式（如 PNG、JPEG），一键调整图片尺寸并导出新图片。
+
+2. **批量缩略图制作**
+   - 支持选择一个包含多张图片的文件夹，自动识别所有图片文件。
+   - 用户可设置缩略图的最大边长，批量生成所有图片的缩略图，并保存到指定文件夹。
+
+3. **系统服务菜单（Service Menu）集成**
+   - 支持通过 macOS 系统服务菜单，直接对选中的图片或文件夹进行图片处理操作（如快速缩略图生成、图片调整等）。
+   - 通过 `NSApp.servicesProvider` 注册服务，支持跨 App 调用。
+
+---
+
+## 二、整体架构与通信流程
+
+### 1. View 层级结构
+
+```mermaid
+graph TD
+    A["ImageSipperApp (App)"]
+    B["ContentView (HSplitView)"]
+    C["TabView (Edit Image / Make Thumbnails)"]
+    D["ImageEditView"]
+    E["ThumbsView"]
+    F["ImageEditControls"]
+    G["ThumbControls"]
+    H["TerminalView"]
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    D --> F
+    E --> G
+    B --> H
+```
+
+- **ImageSipperApp.swift**：应用入口，注入全局 `SipsRunner`，注册系统服务。
+- **ContentView.swift**：主界面，左右分栏。左侧为功能区（TabView），右侧为命令行输出（TerminalView）。
+- **TabView**：包含“图片编辑（ImageEditView）”和“批量缩略图（ThumbsView）”两个功能页签。
+- **ImageEditView**：单张图片的选择、预览与编辑，底部为 `ImageEditControls` 控件区。
+- **ThumbsView**：文件夹选择、图片列表展示，底部为 `ThumbControls` 控件区。
+- **TerminalView**：显示底层命令行工具（sips）执行的输出信息，便于调试和反馈。
+
+---
+
+### 2. 指令调用流程
+
+- **SipsRunner.swift**：核心逻辑层，负责与 macOS 自带的 `sips` 命令行工具交互，实现图片信息获取、尺寸调整、批量缩略图等功能。
+  - `getImageData(for:)`：获取图片元数据。
+  - `resizeImage(...)`：调整图片尺寸与格式。
+  - `createThumbs(...)`：批量生成缩略图。
+- **CommandRunner.swift**：封装 shell 命令执行，异步调用 `sips` 并返回结果。
+- **View 层**：通过 `@EnvironmentObject` 注入 `SipsRunner`，各控件通过调用其方法实现图片处理。
+
+---
+
+### 3. 数据通信流程
+
+- **全局状态管理**：`SipsRunner` 作为 `ObservableObject`，在 App 启动时注入到所有视图，实现数据与命令的全局共享。
+- **父子视图通信**：如 `ImageEditView` 通过 `@Binding` 传递图片 URL、图片信息等给 `ImageEditControls`。
+- **通知机制**：通过 `NotificationCenter`，实现系统服务菜单与主界面的通信（如服务菜单选中图片后自动切换到编辑页并加载图片）。
+- **异步任务**：所有图片处理操作均为异步（async/await），保证界面流畅与数据一致性。
+
+---
+
+## 三、系统服务菜单（Service Menu）集成
+
+- 在 `ImageSipperApp.swift` 中通过 `NSApp.servicesProvider = serviceProvider` 注册服务。
+- 支持通过 Finder 或其他 App 的“服务”菜单，直接将图片或文件夹发送到 ImageSipper 进行处理。
+- 服务菜单触发后，通过通知机制将文件 URL 传递到主界面，自动切换到对应功能页并加载数据。
+
+---
+
+## 四、总结
+
+ImageSipper 采用 SwiftUI + macOS 原生命令行工具（sips）实现，界面简洁，功能聚焦于图片尺寸调整与批量缩略图制作，并通过系统服务菜单实现了与系统的深度集成，极大提升了图片处理的效率与易用性。
+
+---
+
+如需更详细的代码级解读或具体某一功能的实现细节，请随时告知！
