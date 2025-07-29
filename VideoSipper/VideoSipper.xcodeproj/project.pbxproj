@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F8F67A862E38699C00FD67AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F67A6F2E38699A00FD67AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8F67A762E38699A00FD67AE;
+			remoteInfo = VideoSipper;
+		};
+		F8F67A902E38699C00FD67AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F67A6F2E38699A00FD67AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8F67A762E38699A00FD67AE;
+			remoteInfo = VideoSipper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8F67A772E38699A00FD67AE /* VideoSipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F67A852E38699C00FD67AE /* VideoSipperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoSipperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F67A8F2E38699C00FD67AE /* VideoSipperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoSipperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F8F67A792E38699A00FD67AE /* VideoSipper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VideoSipper;
+			sourceTree = "<group>";
+		};
+		F8F67A882E38699C00FD67AE /* VideoSipperTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VideoSipperTests;
+			sourceTree = "<group>";
+		};
+		F8F67A922E38699C00FD67AE /* VideoSipperUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VideoSipperUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8F67A742E38699A00FD67AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A822E38699C00FD67AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A8C2E38699C00FD67AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8F67A6E2E38699A00FD67AE = {
+			isa = PBXGroup;
+			children = (
+				F8F67A792E38699A00FD67AE /* VideoSipper */,
+				F8F67A882E38699C00FD67AE /* VideoSipperTests */,
+				F8F67A922E38699C00FD67AE /* VideoSipperUITests */,
+				F8F67A782E38699A00FD67AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8F67A782E38699A00FD67AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8F67A772E38699A00FD67AE /* VideoSipper.app */,
+				F8F67A852E38699C00FD67AE /* VideoSipperTests.xctest */,
+				F8F67A8F2E38699C00FD67AE /* VideoSipperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8F67A762E38699A00FD67AE /* VideoSipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F67A992E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipper" */;
+			buildPhases = (
+				F8F67A732E38699A00FD67AE /* Sources */,
+				F8F67A742E38699A00FD67AE /* Frameworks */,
+				F8F67A752E38699A00FD67AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F8F67A792E38699A00FD67AE /* VideoSipper */,
+			);
+			name = VideoSipper;
+			packageProductDependencies = (
+			);
+			productName = VideoSipper;
+			productReference = F8F67A772E38699A00FD67AE /* VideoSipper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8F67A842E38699C00FD67AE /* VideoSipperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F67A9C2E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipperTests" */;
+			buildPhases = (
+				F8F67A812E38699C00FD67AE /* Sources */,
+				F8F67A822E38699C00FD67AE /* Frameworks */,
+				F8F67A832E38699C00FD67AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8F67A872E38699C00FD67AE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F8F67A882E38699C00FD67AE /* VideoSipperTests */,
+			);
+			name = VideoSipperTests;
+			packageProductDependencies = (
+			);
+			productName = VideoSipperTests;
+			productReference = F8F67A852E38699C00FD67AE /* VideoSipperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8F67A8E2E38699C00FD67AE /* VideoSipperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F67A9F2E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipperUITests" */;
+			buildPhases = (
+				F8F67A8B2E38699C00FD67AE /* Sources */,
+				F8F67A8C2E38699C00FD67AE /* Frameworks */,
+				F8F67A8D2E38699C00FD67AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8F67A912E38699C00FD67AE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F8F67A922E38699C00FD67AE /* VideoSipperUITests */,
+			);
+			name = VideoSipperUITests;
+			packageProductDependencies = (
+			);
+			productName = VideoSipperUITests;
+			productReference = F8F67A8F2E38699C00FD67AE /* VideoSipperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8F67A6F2E38699A00FD67AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					F8F67A762E38699A00FD67AE = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					F8F67A842E38699C00FD67AE = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F8F67A762E38699A00FD67AE;
+					};
+					F8F67A8E2E38699C00FD67AE = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F8F67A762E38699A00FD67AE;
+					};
+				};
+			};
+			buildConfigurationList = F8F67A722E38699A00FD67AE /* Build configuration list for PBXProject "VideoSipper" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8F67A6E2E38699A00FD67AE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F8F67A782E38699A00FD67AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8F67A762E38699A00FD67AE /* VideoSipper */,
+				F8F67A842E38699C00FD67AE /* VideoSipperTests */,
+				F8F67A8E2E38699C00FD67AE /* VideoSipperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8F67A752E38699A00FD67AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A832E38699C00FD67AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A8D2E38699C00FD67AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8F67A732E38699A00FD67AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A812E38699C00FD67AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F67A8B2E38699C00FD67AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8F67A872E38699C00FD67AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8F67A762E38699A00FD67AE /* VideoSipper */;
+			targetProxy = F8F67A862E38699C00FD67AE /* PBXContainerItemProxy */;
+		};
+		F8F67A912E38699C00FD67AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8F67A762E38699A00FD67AE /* VideoSipper */;
+			targetProxy = F8F67A902E38699C00FD67AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8F67A972E38699C00FD67AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8F67A982E38699C00FD67AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F8F67A9A2E38699C00FD67AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoSipper/VideoSipper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8F67A9B2E38699C00FD67AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoSipper/VideoSipper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F8F67A9D2E38699C00FD67AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoSipper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoSipper";
+			};
+			name = Debug;
+		};
+		F8F67A9E2E38699C00FD67AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoSipper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoSipper";
+			};
+			name = Release;
+		};
+		F8F67AA02E38699C00FD67AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VideoSipper;
+			};
+			name = Debug;
+		};
+		F8F67AA12E38699C00FD67AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWU77R3TC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renjun.VideoSipperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VideoSipper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8F67A722E38699A00FD67AE /* Build configuration list for PBXProject "VideoSipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F67A972E38699C00FD67AE /* Debug */,
+				F8F67A982E38699C00FD67AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F67A992E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F67A9A2E38699C00FD67AE /* Debug */,
+				F8F67A9B2E38699C00FD67AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F67A9C2E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F67A9D2E38699C00FD67AE /* Debug */,
+				F8F67A9E2E38699C00FD67AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F67A9F2E38699C00FD67AE /* Build configuration list for PBXNativeTarget "VideoSipperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F67AA02E38699C00FD67AE /* Debug */,
+				F8F67AA12E38699C00FD67AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8F67A6F2E38699A00FD67AE /* Project object */;
+}
